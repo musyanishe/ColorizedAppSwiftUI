@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SliderView: View {
-    let sliderValue: Double
+    @Binding var sliderValue: Double
     @State private var userValue = ""
     @State private var alertPresented = false
     let sliderColor: Color
@@ -16,7 +16,7 @@ struct SliderView: View {
     var body: some View {
             HStack(spacing: 16){
 //            ValueOfSlider(sliderValue: sliderValue)
-                Slider(value: sliderValue, in: 0...255, step: 1)
+                Slider(value: $sliderValue, in: 0...255, step: 1)
                 .accentColor(sliderColor)
 //            TextField("", text: $userValue)
 //                .font(.title)
@@ -44,12 +44,12 @@ struct SliderView: View {
 //
 //    }
 //}
-
-struct SliderView_Previews: PreviewProvider {
-    static var previews: some View {
-        SliderView(sliderValue: <#T##Double#>, sliderColor: <#T##Color#>)
-    }
-}
+//
+//struct SliderView_Previews: PreviewProvider {
+//    static var previews: some View {
+////        SliderView(sliderValue: <#T##Double#>, sliderColor: <#T##Color#>)
+//    }
+//}
 
 //struct ColorSlider: View {
 //    @Binding var value: Double

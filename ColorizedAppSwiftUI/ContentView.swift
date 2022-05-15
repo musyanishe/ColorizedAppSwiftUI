@@ -16,10 +16,10 @@ struct ContentView: View {
                     .ignoresSafeArea()
             VStack{
 //                ContentToColorView(viewColor: Color(red: <#T##Double#>, green: <#T##Double#>, blue: <#T##Double#>))
-                SliderView(sliderColor: .red)
-                SliderView(sliderColor: .green)
-                SliderView(sliderColor: .blue)
-                .padding()
+//                SliderView(sliderColor: .red)
+//                SliderView(sliderColor: .green)
+//                SliderView(sliderColor: .blue)
+//                .padding()
         }
         }
     }

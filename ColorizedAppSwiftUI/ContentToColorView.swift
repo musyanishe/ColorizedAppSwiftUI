@@ -8,23 +8,30 @@
 import SwiftUI
 
 struct ContentToColorView: View {
-    let viewColor: Color
+    let red: Double
+    let green: Double
+    let blue: Double
     let size = CGSize(width: 350, height: 200)
     
     var body: some View {
+        Color(
+            red: red / 255,
+            green: green / 255,
+            blue: blue / 255
+        )
+        .cornerRadius(30)
+        .overlay(
         RoundedRectangle(cornerRadius: 30)
-            .foregroundColor(viewColor)
-            .frame(size)
-            .padding()
-//            .background(viewColor)
-//            .cornerRadius(30)
-            .padding()
+            .stroke(lineWidth: 4)
+            )
+        .foregroundColor(.green)
+        .frame(size)
     }
 }
 
 struct ViewContent_Previews: PreviewProvider {
     static var previews: some View {
-        ContentToColorView(viewColor: .green)
+        ContentToColorView(red: 150, green: 150, blue: 150)
     }
 }
 
