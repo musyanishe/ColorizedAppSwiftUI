@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE21E44528316C630013C856 /* ContentToColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE21E44428316C630013C856 /* ContentToColorView.swift */; };
+		CE21E447283198B70013C856 /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE21E446283198B70013C856 /* SliderView.swift */; };
 		CEFFF5D7283160D100970590 /* ColorizedAppSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFFF5D6283160D100970590 /* ColorizedAppSwiftUIApp.swift */; };
 		CEFFF5D9283160D100970590 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFFF5D8283160D100970590 /* ContentView.swift */; };
 		CEFFF5DB283160D300970590 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEFFF5DA283160D300970590 /* Assets.xcassets */; };
@@ -14,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE21E44428316C630013C856 /* ContentToColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentToColorView.swift; sourceTree = "<group>"; };
+		CE21E446283198B70013C856 /* SliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
 		CEFFF5D3283160D100970590 /* ColorizedAppSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorizedAppSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEFFF5D6283160D100970590 /* ColorizedAppSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorizedAppSwiftUIApp.swift; sourceTree = "<group>"; };
 		CEFFF5D8283160D100970590 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,6 +57,8 @@
 			children = (
 				CEFFF5D6283160D100970590 /* ColorizedAppSwiftUIApp.swift */,
 				CEFFF5D8283160D100970590 /* ContentView.swift */,
+				CE21E44428316C630013C856 /* ContentToColorView.swift */,
+				CE21E446283198B70013C856 /* SliderView.swift */,
 				CEFFF5DA283160D300970590 /* Assets.xcassets */,
 				CEFFF5DC283160D300970590 /* Preview Content */,
 			);
@@ -138,6 +144,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEFFF5D9283160D100970590 /* ContentView.swift in Sources */,
+				CE21E447283198B70013C856 /* SliderView.swift in Sources */,
+				CE21E44528316C630013C856 /* ContentToColorView.swift in Sources */,
 				CEFFF5D7283160D100970590 /* ColorizedAppSwiftUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
