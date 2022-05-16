@@ -16,9 +16,13 @@ struct ContentToColorView: View {
     
     var body: some View {
         ZStack{
-            Color.indigo
+            Image("snow")
+                .resizable()
                 .ignoresSafeArea()
-            
+//                .aspectRatio(contentMode: .fit)
+//            Color.indigo
+//                .ignoresSafeArea()
+            VStack{
             VStack(spacing: 20){
                 Color(
                     red: red / 255,
@@ -45,6 +49,7 @@ struct ContentToColorView: View {
                 Spacer()
             }
             .padding()
+            }
         }
     }
 }
