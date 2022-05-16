@@ -8,30 +8,44 @@
 import SwiftUI
 
 struct ContentToColorView: View {
-    let red: Double
-    let green: Double
-    let blue: Double
+    @State private var red = Double.random(in: 0...255)
+    @State private var green = Double.random(in: 0...255)
+    @State private var blue = Double.random(in: 0...255)
+   
     let size = CGSize(width: 350, height: 200)
     
     var body: some View {
-        Color(
-            red: red / 255,
-            green: green / 255,
-            blue: blue / 255
-        )
-        .cornerRadius(30)
-        .overlay(
-        RoundedRectangle(cornerRadius: 30)
-            .stroke(lineWidth: 4)
-            )
-        .foregroundColor(.green)
-        .frame(size)
+        ZStack{
+            Color.indigo
+                .ignoresSafeArea()
+            VStack{
+                Color(
+                    red: red / 255,
+                    green: green / 255,
+                    blue: blue,
+                    opacity: 1.0
+                )
+                .cornerRadius(30)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 30)
+                        .stroke(lineWidth: 4)
+                )
+                .foregroundColor(.green)
+                .frame(size)
+                
+                SliderView(sliderViewValue: $red, color: .red)
+                SliderView(sliderViewValue: $green, color: .green)
+                SliderView(sliderViewValue: $blue, color: .blue)
+                Spacer()
+            }
+            .padding()
+        }
     }
 }
 
 struct ViewContent_Previews: PreviewProvider {
     static var previews: some View {
-        ContentToColorView(red: 150, green: 150, blue: 150)
+        ContentToColorView()
     }
 }
 
