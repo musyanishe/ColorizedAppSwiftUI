@@ -35,7 +35,7 @@ struct ContentToColorView: View {
                     RoundedRectangle(cornerRadius: 30)
                         .stroke(lineWidth: 4)
                 )
-                .foregroundColor(.green)
+                .foregroundColor(.white)
                 .frame(size)
                 
                 VStack{
