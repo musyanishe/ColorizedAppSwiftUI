@@ -18,6 +18,7 @@ struct ContentToColorView: View {
         ZStack{
             Color.indigo
                 .ignoresSafeArea()
+            
             VStack{
                 Color(
                     red: red / 255,
@@ -33,9 +34,14 @@ struct ContentToColorView: View {
                 .foregroundColor(.green)
                 .frame(size)
                 
-                SliderView(sliderViewValue: $red, color: .red)
-                SliderView(sliderViewValue: $green, color: .green)
-                SliderView(sliderViewValue: $blue, color: .blue)
+                VStack{
+                SliderView(sliderViewValue: $red.animation(.default), color: .red)
+                SliderView(sliderViewValue: $green.animation(.default), color: .green)
+                    SliderView(sliderViewValue: $blue.animation(.default), color: .blue)
+                }
+                .background(Color(white: 1, opacity: 0.3))
+                .cornerRadius(30)
+                .padding()
                 Spacer()
             }
             .padding()

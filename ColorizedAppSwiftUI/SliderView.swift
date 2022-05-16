@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SliderView: View {
     @Binding var sliderViewValue: Double
-    @State private var labelValue = "100"
+    @State private var labelValue = ""
     
     let color: Color
     
@@ -21,6 +21,9 @@ struct SliderView: View {
                     .accentColor(color)
             TextFieldView(textValue: $labelValue, numberValue: $sliderViewValue)
         }
+        .onAppear(perform: {
+            labelValue = "\(lround(sliderViewValue))"
+        })
         .padding()
     }
 }
