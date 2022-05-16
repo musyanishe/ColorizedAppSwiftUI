@@ -20,7 +20,6 @@ struct TextFieldView: View {
         .frame(width: 55, alignment: .trailing)
         .multilineTextAlignment(.trailing)
         .textFieldStyle(RoundedBorderTextFieldStyle())
-        .border(Color.gray, width: 2)
             .alert(isPresented: $alertPresented) {
                 Alert(title: Text("Wrong Format"), message: Text("Enter a number in range from 0 to 255")
                       )
