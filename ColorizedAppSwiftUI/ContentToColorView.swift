@@ -11,7 +11,7 @@ struct ContentToColorView: View {
     @State private var red = Double.random(in: 0...255)
     @State private var green = Double.random(in: 0...255)
     @State private var blue = Double.random(in: 0...255)
-   
+    
     let size = CGSize(width: 350, height: 200)
     
     var body: some View {
@@ -19,11 +19,11 @@ struct ContentToColorView: View {
             Color.indigo
                 .ignoresSafeArea()
             
-            VStack{
+            VStack(spacing: 20){
                 Color(
                     red: red / 255,
                     green: green / 255,
-                    blue: blue,
+                    blue: blue / 255,
                     opacity: 1.0
                 )
                 .cornerRadius(30)
@@ -35,13 +35,13 @@ struct ContentToColorView: View {
                 .frame(size)
                 
                 VStack{
-                SliderView(sliderViewValue: $red.animation(.default), color: .red)
-                SliderView(sliderViewValue: $green.animation(.default), color: .green)
+                    SliderView(sliderViewValue: $red.animation(.default), color: .red)
+                    SliderView(sliderViewValue: $green.animation(.default), color: .green)
                     SliderView(sliderViewValue: $blue.animation(.default), color: .blue)
                 }
                 .background(Color(white: 1, opacity: 0.3))
                 .cornerRadius(30)
-                .padding()
+                
                 Spacer()
             }
             .padding()

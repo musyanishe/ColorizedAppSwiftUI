@@ -18,7 +18,9 @@ struct SliderView: View {
             Text("\(lround(sliderViewValue))")
                 .font(.system(size: 20, weight: .medium, design: .default))
             Slider(value: $sliderViewValue, in: 0...255, step: 1)
-                    .accentColor(color)
+                .accentColor(color)
+                .onChange(of: sliderViewValue) { value in
+                    labelValue = "\(lround(sliderViewValue))"}
             TextFieldView(textValue: $labelValue, numberValue: $sliderViewValue)
         }
         .onAppear(perform: {

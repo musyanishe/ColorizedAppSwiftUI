@@ -18,6 +18,7 @@ struct TextFieldView: View {
                   onCommit: { checkUserValue() })
         .font(.system(size: 20, weight: .medium, design: .default))
         .frame(width: 55, alignment: .trailing)
+        .multilineTextAlignment(.trailing)
         .textFieldStyle(RoundedBorderTextFieldStyle())
         .border(Color.gray, width: 2)
             .alert(isPresented: $alertPresented) {
