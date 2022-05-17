@@ -14,15 +14,14 @@ struct TextFieldView: View {
     @State private var alertPresented = false
     
     var body: some View {
-        TextField("", text: $textValue,
-                  onCommit: { checkUserValue() })
+        TextField("", text: $textValue) { checkUserValue() }
         .font(.system(size: 20, weight: .medium, design: .default))
         .frame(width: 55, alignment: .trailing)
         .multilineTextAlignment(.trailing)
         .textFieldStyle(RoundedBorderTextFieldStyle())
             .alert(isPresented: $alertPresented) {
-                Alert(title: Text("Wrong Format"), message: Text("Enter a number in range from 0 to 255")
-                      )
+                Alert(title: Text("Wrong Format"),
+                      message: Text("Enter a number in range from 0 to 255"))
             }
             
     }

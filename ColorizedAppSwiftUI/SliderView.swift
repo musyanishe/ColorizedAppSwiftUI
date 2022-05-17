@@ -20,12 +20,13 @@ struct SliderView: View {
             Slider(value: $sliderViewValue, in: 0...255, step: 1)
                 .accentColor(color)
                 .onChange(of: sliderViewValue) { value in
-                    labelValue = "\(lround(sliderViewValue))"}
+                    labelValue = "\(lround(sliderViewValue))"
+                }
             TextFieldView(textValue: $labelValue, numberValue: $sliderViewValue)
         }
-        .onAppear(perform: {
+        .onAppear {
             labelValue = "\(lround(sliderViewValue))"
-        })
+        }
         .padding()
     }
 }

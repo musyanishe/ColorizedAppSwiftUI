@@ -12,7 +12,7 @@ struct ContentToColorView: View {
     @State private var green = Double.random(in: 0...255)
     @State private var blue = Double.random(in: 0...255)
     
-    let size = CGSize(width: 350, height: 200)
+    private let size = CGSize(width: 350, height: 200)
     
     var body: some View {
         ZStack{
